@@ -1,0 +1,139 @@
+@use './colors' as c;
+
+//navigation entry
+
+@keyframes shownav {
+	from {
+		left: 100%;
+	}
+	to {
+		left: 0;
+	}
+}
+@keyframes hidenav {
+	from {
+		left: 0;
+	}
+	to {
+		left: 100%;
+	}
+}
+
+.navbar-active {
+    animation: shownav 0.5s both;
+}
+.navbar-hide {
+    animation: hidenav 0.5s forwards;
+}
+
+//Burger button animation
+
+@keyframes burgerSwapCenter {
+	from {
+		background-color: c.$primary;
+		// background-color: c.$secondary;
+	}
+	to {
+		background-color: c.$backgroundDark;
+		// background-color: c.$backgroundLight;
+	}
+}
+@keyframes burgerSwapTop {
+	from {
+		top: 15px;
+		transform: rotate(0deg);
+		background-color: c.$primary;
+		// background-color: c.$secondary;
+	}
+	to {
+		top: 0;
+		transform: rotate(45deg);
+		// background-color: c.$darkText;
+		background-color: c.$secondary;
+	}
+}
+@keyframes burgerSwapBottom {
+	from {
+		top: -15px;
+		transform: rotate(0deg);
+		background-color: c.$primary;
+	}
+	to {
+		top: 0;
+		transform: rotate(-45deg);
+		// background-color: c.$darkText;
+		background-color: c.$secondary;
+	}
+}
+
+.burger-active {
+	animation: burgerSwapCenter 0.3s forwards;
+}
+.burger-active::before {
+	animation: burgerSwapTop 0.3s forwards;
+}
+.burger-active::after {
+	animation: burgerSwapBottom 0.3s forwards;
+}
+
+@keyframes burgerBackCenter {
+	from {
+		// background-color: c.$backgroundLight;
+		background-color: c.$secondary;
+	}
+	to {
+		background-color: c.$primary;
+		// background-color: c.$secondary;
+	}
+}
+@keyframes burgerBackTop {
+	from {
+		top: 0;
+		transform: rotate(45deg);
+		background-color: c.$backgroundDark;
+	}
+	to {
+		top: 15px;
+		transform: rotate(0deg);
+		background-color: c.$primary;
+		// background-color: c.$secondary;
+	}
+}
+@keyframes burgerBackBottom {
+	from {
+		top: 0;
+		transform: rotate(-45deg);
+		background-color: c.$secondary;
+	}
+	to {
+		top: -15px;
+		transform: rotate(0deg);
+		background-color: c.$primary;
+		// background-color: c.$secondary;
+	}
+}
+
+.burger-back {
+	animation: burgerBackCenter 0.3s forwards;
+}
+.burger-back::before {
+	animation: burgerBackTop 0.3s forwards;
+}
+.burger-back::after {
+	animation: burgerBackBottom 0.3s forwards;
+}
+
+//navitem entry
+
+@keyframes navItemEntry {
+	from {
+		transform: translateX(300%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-entry {
+	animation: navItemEntry 0.3s both;
+}

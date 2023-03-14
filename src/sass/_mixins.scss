@@ -1,0 +1,60 @@
+@use './colors' as c;
+
+@mixin flex-center($fdir) {
+	display: flex;
+	flex-direction: $fdir;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-space($fdir) {
+	display: flex;
+	flex-direction: $fdir;
+	justify-content: space-between;
+	align-items: center;
+}
+@mixin flex-end($fdir) {
+	display: flex;
+	flex-direction: $fdir;
+	justify-content: flex-end;
+	align-items: center;
+}
+@mixin flex-start($fdir) {
+	display: flex;
+	flex-direction: $fdir;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@mixin burger-bar {
+	height: 2px;
+	width: 40px;
+	background-color: c.$primary;
+	// background-color: c.$secondary;
+	border-radius: 1px;
+}
+
+@mixin button {
+	padding: 0.75em 1em;
+	color: c.$whiteText;
+	// color: c.$white;
+	background-color: c.$primary;
+	// border: transparent;
+	border: 2px solid transparent;
+	border-radius: 2em;
+	font-weight: bold;
+	text-shadow: 0 0 3px c.$darkText;
+	cursor: pointer;
+}
+
+// @mixin button-hover {
+// 	color: c.$primary;
+// 	background-color: c.$whiteText;
+// 	transform: scale(1.05);
+// }
+@mixin button-hover {
+	color: c.$primary;
+	background-color: transparent;
+	border: 2px solid c.$primary;
+	// transform: scale(1.05);
+}
