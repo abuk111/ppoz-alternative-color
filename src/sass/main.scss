@@ -202,7 +202,7 @@ header {
 	// margin-top: 116px;
 
 	.header {
-		background-color: c.$backgroundMedium;
+		background-color: c.$backgroundLight;
 		position: relative;
 
 		&__hero-img {
@@ -273,7 +273,7 @@ header {
 
 			&-description {
 				margin-bottom: 1em;
-				color: c.$whiteText;
+				color: c.$darkText;
 				font-size: 1.6rem;
 				font-weight: 400;
 				line-height: 1.5em;
